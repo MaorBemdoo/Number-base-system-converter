@@ -24,7 +24,12 @@ def main():
             except ValueError as e:
                 print(e)
 
-        to_base = get_user_input("Enter the base you want to convert to (d, b, o, h): ", base_map.keys())
+
+        while True:
+            to_base = get_user_input("Enter the base you want to convert to (d, b, o, h): ", base_map.keys())
+            if(to_base != from_base):
+                break
+            print(f"You cannot convert to the same base, {base_map[from_base]} to {base_map[to_base]}")
         
         print(f"Converting {value} from {base_map[from_base]} to {base_map[to_base]}...")
 
