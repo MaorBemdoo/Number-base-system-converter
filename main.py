@@ -1,18 +1,13 @@
 import importlib
 
+from lib.get_user_input import get_user_input
+
 base_map = {
     'd': "decimal",
     'b': "binary",
     'o': "octal",
     'h': "hexadecimal"
 }
-
-def get_user_input(prompt, valid_options):
-    while True:
-        user_input = input(prompt).strip().lower()
-        if user_input in valid_options:
-            return user_input
-        print(f"Invalid input. Please choose from {', '.join(valid_options)}.")
 
 def main():
     print("Welcome to the Number Base System Converter!")
@@ -26,7 +21,7 @@ def main():
         file_and_func_name = base_map[from_base] + '_to_' + base_map[to_base]
 
         try:
-            module = importlib.import_module(f"lib.{file_and_func_name}")
+            module = importlib.import_module(f"lib.converters.{file_and_func_name}")
 
             func = getattr(module, file_and_func_name)
 
