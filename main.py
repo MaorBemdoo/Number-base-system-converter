@@ -1,5 +1,6 @@
 import importlib
 from lib.get_user_input import get_user_input
+from lib.validate_input import validate_input
 
 base_map = {
     'd': "decimal",
@@ -14,8 +15,18 @@ def main():
 
     while True:
         from_base = get_user_input("Enter the base you want to convert from (d, b, o, h): ", base_map.keys())
-        value = input("Enter the value you want to convert: ").strip()
+
+        while True:
+            value = input(f"Enter the value you want to convert from {base_map[from_base]}: ")
+            try:
+                validate_input(value, from_base)
+                break
+            except ValueError as e:
+                print(e)
+
         to_base = get_user_input("Enter the base you want to convert to (d, b, o, h): ", base_map.keys())
+        
+        print(f"Converting {value} from {base_map[from_base]} to {base_map[to_base]}...")
 
         file_and_func_name = base_map[from_base] + '_to_' + base_map[to_base]
 
