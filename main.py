@@ -17,7 +17,7 @@ def main():
         from_base = get_user_input("Enter the base you want to convert from (d, b, o, h): ", base_map.keys())
 
         while True:
-            value = input(f"Enter the value you want to convert from {base_map[from_base]}: ")
+            value = input(f"Enter the value you want to convert from {base_map[from_base]}: ").strip()
             try:
                 validate_input(value, from_base)
                 break
