@@ -10,7 +10,7 @@ base_map = {
 }
 
 def main():
-    print("Welcome to the Number Base System Converter!")
+    print("\nWelcome to the Number Base System Converter!")
     print("Available bases:\nDecimal(d)\nBinary(b)\nOctal(o)\nHexadecimal(h)")
 
     while True:
