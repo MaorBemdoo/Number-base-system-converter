@@ -1,5 +1,4 @@
 import importlib
-
 from lib.get_user_input import get_user_input
 
 base_map = {
