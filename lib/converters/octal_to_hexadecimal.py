@@ -1,4 +1,4 @@
-def octal_to_hexadecimal(num):
+def octal_to_hexadecimal(number):
     hex_dictionary = {
         0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5",
         6: '6', 7: "7", 8: "8", 9: "9", 10: "A", 11: "B",
@@ -8,10 +8,10 @@ def octal_to_hexadecimal(num):
     # Convert octal to decimal
     decimal = 0
     base_num = 1
-    while num > 0:
-        remainder = num % 10
+    while number > 0:
+        remainder = number % 10
         decimal += remainder * base_num
-        num //= 10
+        number //= 10
         base_num *= 8
 
     # Convert decimal to hexadecimal
