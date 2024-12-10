@@ -5,16 +5,13 @@ def hexadecimal_to_octal(number):
         'C': 12, 'D': 13, 'E': 14, 'F': 15
     }
 
-    # Convert hexadecimal number to decimal
     decimal_number = 0
     for base in number:
         decimal_number = decimal_number * 16 + hex_to_dec_dictionary[base.upper()]
 
-    # Special case for 0
     if decimal_number == 0:
         return '0'
 
-    # Convert decimal to octal
     octal_number = ''
     while decimal_number > 0:
         octal_value = decimal_number % 8
