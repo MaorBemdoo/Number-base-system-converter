@@ -45,9 +45,9 @@ def main():
             print("Result:", result)	
 
         except ModuleNotFoundError:	
-            print(f"Error: Conversion file 'lib/{file_and_func_name}.py' not found.")	
+            print(f"Error: Conversion file 'lib/converters/{file_and_func_name}.py' not found.")	
         except AttributeError:	
-            print(f"Error: Function '{file_and_func_name}' not found in 'lib/{file_and_func_name}.py'.")	
+            print(f"Error: Function '{file_and_func_name}' not found in 'lib/converters/{file_and_func_name}.py'.")	
         except ValueError as e:	
             print(f"Value Error: {e}")	
         except Exception as e:	
