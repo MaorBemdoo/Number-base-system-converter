@@ -5,7 +5,6 @@ def octal_to_hexadecimal(number):
         12: "C", 13: "D", 14: "E", 15: "F",
     }
 
-    # Convert octal to decimal
     decimal = 0
     base_num = 1
     while number > 0:
@@ -14,7 +13,6 @@ def octal_to_hexadecimal(number):
         number //= 10
         base_num *= 8
 
-    # Convert decimal to hexadecimal
     hexadecimal = "0"
     while decimal > 0:
         remainder = decimal % 16
