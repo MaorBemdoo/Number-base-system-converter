@@ -1,5 +1,7 @@
 def decimal_to_octal(decimal_num):
 
+    decimal_num = int(decimal_num)
+
     if decimal_num == 0:
         return "0"
 

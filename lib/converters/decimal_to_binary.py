@@ -1,4 +1,5 @@
 def decimal_to_binary(decimal_number):
+    decimal_number=int(decimal_number)
     if decimal_number == 0:
         return "0"
     binary = ""
